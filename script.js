@@ -48,7 +48,7 @@ function game(){
     let playerScore = 0;
     let computerScore = 0;
 
-    for(let round = 1; round <= 3; round++){
+    while((playerScore < 5) && (computerScore < 5)){
         let playerChoice = getPlayerChoice();
         let computerChoice = getComputerChoice();
         let result = gameRound(playerChoice, computerChoice);
