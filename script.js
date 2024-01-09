@@ -1,17 +1,18 @@
+let pierre = document.querySelector('#pierre');
+let feuille = document.querySelector('#feuille');
+let ciseaux = document.querySelector('#ciseaux');
+
+
 function getComputerChoice() {
    let choice = ['pierre', 'feuille', 'ciseaux'];
    let random = Math.floor(Math.random() * 3); 
    return choice[random];
 }
 
-function getPlayerChoice(){
-    let playerChoice = prompt('Choisissez entre pierre, feuille ou ciseaux');
-    playerChoice = playerChoice.toLowerCase().replace(/\s/g, '');
-    while (playerChoice !== 'pierre' && playerChoice !== 'feuille' && playerChoice !== 'ciseaux') {
-        playerChoice = prompt('Erreur : Choisissez entre pierre, feuille ou ciseaux');
-    }
-    return playerChoice;
-}
+
+pierre.addEventListener('click', function("pierre"));
+feuille.addEventListener('click', function("feuille"));
+ciseaux.addEventListener('click', function("ciseaux"));
 
 function gameRound(playerChoice, computerChoice) {
     switch (playerChoice) {
@@ -75,7 +76,7 @@ function game(){
     let rematch = prompt('Voulez-vous rejouer ?, (oui ou non)');
     rematch = rematch.toLowerCase().replace(/\s/g, '');
     while (rematch !== 'oui' && rematch !== 'non') {
-        rematch = prompt('Erreur : Voulez-vous rejouer ?, (oui ou non)');
+        //rematch = prompt('Erreur : Voulez-vous rejouer ?, (oui ou non)');
         rematch = rematch.toLowerCase().replace(/\s/g, '');
     }
 
