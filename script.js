@@ -66,16 +66,16 @@ function roundWinner(playerChoice, computerChoice) {
             } else if (computerChoice === 'feuille') {
                 return 'Egalité, l\'ordinateur a choisi Feuille';
             } else {
-                return 'Perdu, les ciseaux battent la feuille';
+                return 'Perdu, le ciseau bat la feuille';
             }
 
         case 'ciseaux':
             if (computerChoice === 'pierre') {
                 return 'Perdu, la pierre bat les ciseaux';
             } else if (computerChoice === 'feuille') {
-                return 'Gagné, les ciseaux battent la feuille';
+                return 'Gagné, le ciseau bat la feuille';
             } else {
-                return 'Egalité, l\'ordinateur a choisi Ciseaux';
+                return 'Egalité, l\'ordinateur a choisi ciseau';
             }
     }
 }
